@@ -91,4 +91,17 @@ public class Calculator {
 			this.print("File could not be loaded! Because:" + e);
 		}
 	}
+	
+	// Returns if number is odd
+	public boolean isOdd(float number) {
+		boolean boolIsOdd = (number%2) != 0;
+		switch (boolIsOdd) {
+			case true:
+				this.print(number + " is odd!");
+				return true;
+			case false: 
+				this.print(number + " is not odd!");
+				return false;
+		}
+	}
 }
