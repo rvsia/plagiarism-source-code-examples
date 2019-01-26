@@ -2,24 +2,31 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <chrono>
+#include <ctime>
+#include <fstream>
 
 using namespace std;
 
 // Calculator  class
 class Calculator {
     // History of results
-private: vector<string> history;
+private: vector<float> history;
 
     // Constructor for loading results from file
     public: Calculator(string fileName) {
         loadHistoryFromFile(fileName);
         print("Calculator was created");
     }
+    
+    Calculator() {
+        print("Calculator was created");
+    }
 
     // Prints text with current date
     public: void print(string text) {
-        //java.util.Date date = new java.util.Date();
-        std::cout << "# " << date.toString() << " # " << text;
+        std::time_t date = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
+        std::cout << "# " <<  std::ctime(&date) << " # " << text;
     }
 
     // Adds two numbers
@@ -57,13 +64,13 @@ private: vector<string> history;
 
     // Adds result to history array
     private: void addToHistory(float item) {
-        history.push_back(to_string(item));
+        history.push_back(item);
     }
 
     // Print the whole history
     public: void printHistory() {
         for (float result: history) {
-            print(result);
+            print(to_string(result));
         }
     }
 
@@ -81,37 +88,28 @@ private: vector<string> history;
     // Adds results to history
     public: void loadHistoryFromFile(string fileName) {
         try {
-            File historyFile = new File(fileName);
-            BufferedReader reader = new BufferedReader(new FileReader(historyFile));
+            std::ifstream file(fileName);
             string readLine = "";
-            while ((readLine = reader.readLine()) != null) {
-                addToHistory(Float.parseFloat(readLine));
+            while (getline(file, readLine)) {
+                addToHistory(stof(readLine));
             }
-            reader.close();
+            file.close();
             print("History form file was loaded!");
-        } catch (Exception e) {
-            print("File could not be loaded! Because:" + e);
+        } catch (const std::exception& e) {
+            print("File could not be loaded! Because:" + std::string(e.what()));
         }
     }
 
     // Returns if number is odd
     public: bool isOdd(float number) {
-        bool boolIsOdd = (number%2) != 0;
+        bool boolIsOdd = (number/2) != 0;
         switch (boolIsOdd) {
             case true:
-                print(number + " is odd!");
+                print(to_string(number) + " is odd!");
                 return true;
             case false:
-                print(number + " is not odd!");
+                print(to_string(number) + " is not odd!");
                 return false;
         }
     }
-}
-
-int main()
-{
-  std::string name;
-  std::cout << "What is your name? ";
-  getline (std::cin, name);
-  std::cout << "Hello, " << name << "!\n";
-}
+};
