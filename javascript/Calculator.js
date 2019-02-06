@@ -5,21 +5,18 @@ class Calculator {
     history = [];
 	
 	// Constructor for loading results from file
-
 	constructor(fileName) {
 		this.loadHistoryFromFile(fileName);
 		this.print("Calculator was created");
 	}
 	
 	// Prints text with current date
-	
 	print(text) {
 		date = new Date();
 	    console.log("# " + date.toString() + " # " + text );
 	}
 	
 	// Adds two numbers
-	
 	addition(number1, number2) {
 		const result = number1 + number2;
 		this.print("Result od addition is " + result);
@@ -28,7 +25,6 @@ class Calculator {
 	}
 	
 	// Subtracts two numbers
-	
 	substraction(number1, number2) {
 		const result = number1 - number2;
 		this.print("Result od substraction is " + result);
@@ -38,7 +34,6 @@ class Calculator {
 	
 	
 	// Multiplies two numbers
-	
 	multiplication(number1, number2) {
 		const result = number1 * number2;
 		this.print("Result od multiplication is " + result);
@@ -47,7 +42,6 @@ class Calculator {
 	}
 	
 	// Divides two numbers
-	
 	division(number1, number2) {
 		const result = number1 / number2;
 		this.print("Result od division is " + result);
@@ -61,7 +55,6 @@ class Calculator {
 	}
 	
 	// Print the whole history
-	
 	printHistory() {
 		this.history.forEach(function(result){
 			this.print(result);
@@ -69,7 +62,6 @@ class Calculator {
 	}
 	
 	// Compare two numbers
-	
 	compareNumbers(number1, number2) {
 		if (number1 > number2) {
 			this.print(number1 + " is bigger than " + number2);
@@ -81,7 +73,6 @@ class Calculator {
 	}
 	
 	// Adds results to history
-	
 	loadHistoryFromFile(fileName) {
 		try {
 			const fileName = fileName.split('\n');
@@ -97,7 +88,6 @@ class Calculator {
 	}
 	
 	// Returns if number is odd
-	
 	isOdd(number) {
 		boolIsOdd = (number%2) != 0;
 		switch (boolIsOdd) {
