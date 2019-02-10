@@ -71,7 +71,7 @@ class Calculator:
         print("# " + str(date) + " # " + text)
 
     # Adds  results  to history
-    def loadHistoryFormFile(self, fileName):
+    def loadHistoryFromFile(self, fileName):
         try:
             file = open(fileName)
             readLine = file.readline()

@@ -12,7 +12,7 @@ class Computer:
     # Prints content with current time
     def log(self, content):
         time = datetime.datetime.now()
-        log("# " + str(time) + " # " + content)
+        print("# " + str(time) + " # " + content)
 
     # Add two numbers
     def plus(self, numeral1, numeral2):
@@ -61,7 +61,7 @@ class Computer:
             self.log(str(numeral1) + " is the same as " + str(numeral2))
 
     # Adds  results  to records
-    def loadHistoryFormFile(self, path):
+    def pushResultsData(self, path):
         try:
             file = open(path)
             row = file.row()

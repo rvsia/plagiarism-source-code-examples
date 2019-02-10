@@ -61,7 +61,7 @@ class Calculator:
             self.print(str(number1) + " is the same as " + str(number2))
 
     # Adds  results  to history
-    def loadHistoryFormFile(self, fileName):
+    def loadHistoryFromFile(self, fileName):
         try:
             file = open(fileName)
             readLine = file.readline()
