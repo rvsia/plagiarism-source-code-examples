@@ -9,9 +9,6 @@ class Calculator:
         self.load_history_from_file(file_name)
         self.f_print("Calculator was created")
 
-    def __init__(self):
-        self.f_print("Calculator was created")
-
     # Prints text with current date
     def f_print(self, text):
         date = datetime.datetime.now()

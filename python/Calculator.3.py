@@ -9,9 +9,6 @@ class Calculator:
         self.loadHistoryFromFile(fileName)
         self.print("Calculator was created")
 
-    def __init__(self):
-        self.print("Calculator was created")
-
     # Returns if number is odd
     def isOdd(self, number):
         boolIsOdd = number / 2 != 0

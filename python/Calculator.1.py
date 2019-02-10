@@ -9,9 +9,6 @@ class Computer:
         self.pushResultsData(path)
         self.log("Computer was created")
 
-    def __init__(self):
-        self.log("Computer was created")
-
     # Prints content with current time
     def log(self, content):
         time = datetime.datetime.now()
