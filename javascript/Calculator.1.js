@@ -75,7 +75,7 @@ class Computer {
 	// Adds results to records
 	pushResultsData(path) {
 		try {
-			const path = path.split('\n');
+			path = path.split('\n');
 			const row = 0;
             while (row < path.length) {
 				this.pushResult(row);
