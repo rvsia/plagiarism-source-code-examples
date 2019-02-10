@@ -10,10 +10,10 @@ Source code examples of plagiarism for my diploma thesis
 
 In variants:
 - Classic
-- Different naming systems
-- Different names
-- Restructured
-- Half-different
+- .1. Different naming systems
+- .2. Different names
+- .3. Restructured
+- .4. Half-different (http://www.rosettacode.org/wiki/String_prepend)
 
 **Description**
 
