@@ -15,6 +15,8 @@ In variants:
 - .3. Restructured
 - .4. Half-different (http://www.rosettacode.org/wiki/String_prepend, php: http://www.rosettacode.org/wiki/String_concatenation#PHP)
 
+Every language has a different file, which solves different problem: http://www.rosettacode.org/wiki/Forest_fire
+
 **Description**
 
 Simple calculator class representing basic elements of source code. These examples are not the best way how to create such class!
