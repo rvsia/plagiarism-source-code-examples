@@ -13,7 +13,7 @@ In variants:
 - .1. Different naming systems
 - .2. Different names
 - .3. Restructured
-- .4. Half-different (http://www.rosettacode.org/wiki/String_prepend)
+- .4. Half-different (http://www.rosettacode.org/wiki/String_prepend, php: http://www.rosettacode.org/wiki/String_concatenation#PHP)
 
 **Description**
 
