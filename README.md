@@ -10,8 +10,8 @@ Source code examples of plagiarism for my diploma thesis
 
 In variants:
 - Classic
-- .1. Different naming systems
-- .2. Different names
+- .1. Different names
+- .2. Different naming systems
 - .3. Restructured
 - .4. Half-different (http://www.rosettacode.org/wiki/String_prepend, php: http://www.rosettacode.org/wiki/String_concatenation#PHP)
 
