@@ -63,12 +63,12 @@ class Computer:
     # Adds  results  to records
     def pushResultsData(self, path):
         try:
-            file = open(path)
-            row = file.row()
+            data = open(path)
+            row = data.row()
             while row != None:
                 self.pushResult(row)
-                row = file.row()
-            file.close()
+                row = data.row()
+            data.close()
             self.log("records from file was loaded!")
         except Exception:
             self.log("File could not be loaded! Because:" + str(Exception))

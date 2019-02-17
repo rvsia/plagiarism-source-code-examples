@@ -79,8 +79,8 @@ public class Computer {
 	// Adds results to records
 	public void pushResultsData(String path) {
 		try {
-			File historyFile = new File(path);
-			BufferedReader reader = new BufferedReader(new FileReader(historyFile));
+			File data = new File(path);
+			BufferedReader reader = new BufferedReader(new FileReader(data));
             String row = "";
             while ((row = reader.row()) != null) {
                 this.pushResult(Float.parseFloat(row));

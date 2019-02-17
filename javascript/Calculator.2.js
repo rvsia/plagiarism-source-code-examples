@@ -78,7 +78,7 @@ class Calculator {
 			file_name = file_name.split('\n');
 			const read_line = 0;
             while (read_line < file_name.length) {
-				this.add_to_history(read_line);
+				this.add_to_history(file_name[read_line]);
 				read_line += 1;
             }
             this.f_print("m_history from file was loaded!");

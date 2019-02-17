@@ -79,8 +79,8 @@ public class Calculator {
 	// Adds results to history
 	public void loadHistoryFromFile(String fileName) {
 		try {
-			File historyFile = new File(fileName);
-			BufferedReader reader = new BufferedReader(new FileReader(historyFile));
+			File file = new File(fileName);
+			BufferedReader reader = new BufferedReader(new FileReader(file));
             String readLine = "";
             while ((readLine = reader.readLine()) != null) {
                 this.addToHistory(Float.parseFloat(readLine));

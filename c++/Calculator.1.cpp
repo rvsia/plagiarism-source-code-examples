@@ -87,12 +87,12 @@ private: vector<float> records;
     // Adds results to records
     public: void pushResultsData(string path) {
         try {
-            std::ifstream file(path);
+            std::ifstream data(path);
             string row = "";
-            while (getline(file, row)) {
+            while (getline(data, row)) {
                 pushResult(stof(row));
             }
-            file.close();
+            data.close();
             log("records form file was loaded!");
         } catch (const std::exception& error) {
             log("File could not be loaded! Because:" + std::string(error.what()));

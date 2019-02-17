@@ -75,10 +75,10 @@ class Computer {
 	// Adds results to records
 	pushResultsData(path) {
 		try {
-			path = path.split('\n');
+			data = path.split('\n');
 			const row = 0;
-            while (row < path.length) {
-				this.pushResult(row);
+            while (row < data.length) {
+				this.pushResult(data[row]);
 				row += 1;
             }
             this.log("records from file was loaded!");

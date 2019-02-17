@@ -75,12 +75,12 @@ class Computer {
 	public function pushResultsData($path) {
         if($path !== '')
         try {
-			$file = fopen($path, "r");
+			$data = fopen($path, "r");
             $row = "";
-            while (($row = fgets($file)) !== false) {
+            while (($row = fgets($data)) !== false) {
                 $this->pushResult($row);
             }
-            fclose($file);
+            fclose($data);
             $this->log("records form file was loaded!");
 		} catch (Exception $error) {
 			$this->log("File could not be loaded! Because:" . $error);
